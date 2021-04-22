@@ -60,7 +60,7 @@ namespace GildedRose.Tests.StrategyTests
         }
 
         [Test]
-        public void Should_NotExceedQualityLimit()
+        public void ShouldNot_ExceedQualityLimit()
         {
             // Arrange
             int sellIn = 4;

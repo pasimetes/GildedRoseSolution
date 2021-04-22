@@ -9,7 +9,7 @@ namespace GildedRose.Tests.StrategyTests
     public class NoStrategyTests : TestBase
     {
         [Test]
-        public void Should_NotUpdateItem()
+        public void ShouldNot_UpdateItem()
         {
             // Arrange
             int sellIn = 20;

@@ -40,5 +40,13 @@ namespace GildedRose.Tests
             IStrategy strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
             strategy.ShouldBeOfType<NoStrategy>();
         }
+
+        [Test]
+        public void Should_ReturnConjuredStrategy()
+        {
+            int itemTypeId = (int)ItemTypeEnum.Conjured;
+            IStrategy strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
+            strategy.ShouldBeOfType<ConjuredStrategy>();
+        }
     }
 }

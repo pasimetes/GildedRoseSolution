@@ -9,7 +9,7 @@ namespace GildedRose.Tests.StrategyTests
     public class AgedGetsWorseTests : TestBase
     {
         [Test]
-        public void Should_CalculateProperly_When_QualityIsAlmostZero()
+        public void ShouldNot_AllowQualityGoBelowZero()
         {
             // Arrange
             int sellIn = 30;

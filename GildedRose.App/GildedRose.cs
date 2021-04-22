@@ -1,8 +1,8 @@
 ﻿using GildedRose.App.Interfaces;
 using GildedRose.App.Mappings;
+using GildedRose.Domain.BusinessRules;
 using GildedRose.Domain.Entities;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace GildedRose.App
 {
@@ -28,8 +28,8 @@ namespace GildedRose.App
         {
             foreach (var item in _items)
             {
-                ItemTypeStrategyMap.GetUpdateStrategyByType(item.ItemTypeId)
-                    .Apply(item);
+                IStrategy strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(item.ItemTypeId);
+                strategy.Apply(item);
             }
         }
     }

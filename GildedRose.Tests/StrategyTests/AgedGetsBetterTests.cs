@@ -9,7 +9,7 @@ namespace GildedRose.Tests.StrategyTests
     public class AgedGetsBetterTests : TestBase
     {
         [Test]
-        public void Should_CalculateProperly_When_QualityIsCloseToFifty()
+        public void ShouldNot_ExceedQualityLimit()
         {
             // Arrange
             int sellIn = 20;

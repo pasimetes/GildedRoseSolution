@@ -9,8 +9,7 @@ namespace GildedRose.Tests
     {
         protected IGildedRose GildedRose;
 
-        [SetUp]
-        public void SetUp()
+        public TestBase()
         {
             GildedRose = new Mock<App.GildedRose>().Object;
         }
