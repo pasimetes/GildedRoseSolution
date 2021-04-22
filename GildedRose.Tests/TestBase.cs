@@ -2,7 +2,7 @@
 using Moq;
 using NUnit.Framework;
 
-namespace GildedRose.Tests.StrategyTests
+namespace GildedRose.Tests
 {
     [TestFixture]
     public abstract class TestBase

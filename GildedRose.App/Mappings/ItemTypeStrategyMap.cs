@@ -15,7 +15,8 @@ namespace GildedRose.App.Mappings
                 { (int)ItemTypeEnum.AgedGetsBetter, new AgedGetsBetterStrategy() },
                 { (int)ItemTypeEnum.AgedGetsWorse, new AgedGetsWorseStrategy() },
                 { (int)ItemTypeEnum.BackStage, new BackStageStrategy() },
-                { (int)ItemTypeEnum.Legendary, new NoStrategy() }
+                { (int)ItemTypeEnum.Legendary, new NoStrategy() },
+                { (int)ItemTypeEnum.Conjured, new ConjuredStrategy() }
             };
         }
 

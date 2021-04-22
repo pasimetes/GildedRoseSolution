@@ -19,7 +19,7 @@ namespace GildedRose.Extensions
             items.Add(new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 10, Quality = 49, ItemTypeId = (int)ItemTypeEnum.BackStage });
             items.Add(new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 5, Quality = 49, ItemTypeId = (int)ItemTypeEnum.BackStage });
 
-            items.Add(new Item { Name = "Conjured Mana Cake", SellIn = 3, Quality = 6, ItemTypeId = (int)ItemTypeEnum.AgedGetsWorse });
+            items.Add(new Item { Name = "Conjured Mana Cake", SellIn = 3, Quality = 6, ItemTypeId = (int)ItemTypeEnum.Conjured });
 
             return items;
         }

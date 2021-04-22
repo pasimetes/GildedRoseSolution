@@ -5,6 +5,7 @@
         AgedGetsBetter = 1,
         AgedGetsWorse = 2,
         BackStage = 3,
-        Legendary = 4
+        Legendary = 4,
+        Conjured = 5
     }
 }
