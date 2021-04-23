@@ -7,7 +7,7 @@ namespace GildedRose.Tests
     [TestFixture]
     public abstract class TestBase
     {
-        protected IGildedRose GildedRose;
+        protected readonly IGildedRose GildedRose;
 
         public TestBase()
         {

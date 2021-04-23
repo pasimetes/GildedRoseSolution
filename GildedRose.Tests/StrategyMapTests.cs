@@ -12,40 +12,40 @@ namespace GildedRose.Tests
         [Test]
         public void Should_ReturnAgedGetsBetterStrategy()
         {
-            int itemTypeId = (int)ItemTypeEnum.AgedGetsBetter;
-            IStrategy strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
+            var itemTypeId = (int)ItemTypeEnum.AgedGetsBetter;
+            var strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
             strategy.ShouldBeOfType<AgedGetsBetterStrategy>();
         }
 
         [Test]
         public void Should_ReturnAgedGetsWorseStrategy()
         {
-            int itemTypeId = (int)ItemTypeEnum.AgedGetsWorse;
-            IStrategy strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
+            var itemTypeId = (int)ItemTypeEnum.AgedGetsWorse;
+            var strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
             strategy.ShouldBeOfType<AgedGetsWorseStrategy>();
         }
 
         [Test]
         public void Should_ReturnBackStageStrategy()
         {
-            int itemTypeId = (int)ItemTypeEnum.BackStage;
-            IStrategy strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
+            var itemTypeId = (int)ItemTypeEnum.BackStage;
+            var strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
             strategy.ShouldBeOfType<BackStageStrategy>();
         }
 
         [Test]
         public void Should_ReturnNoStrategy()
         {
-            int itemTypeId = (int)ItemTypeEnum.Legendary;
-            IStrategy strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
+            var itemTypeId = (int)ItemTypeEnum.Legendary;
+            var strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
             strategy.ShouldBeOfType<NoStrategy>();
         }
 
         [Test]
         public void Should_ReturnConjuredStrategy()
         {
-            int itemTypeId = (int)ItemTypeEnum.Conjured;
-            IStrategy strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
+            var itemTypeId = (int)ItemTypeEnum.Conjured;
+            var strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(itemTypeId);
             strategy.ShouldBeOfType<ConjuredStrategy>();
         }
     }

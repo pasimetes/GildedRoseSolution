@@ -1,8 +1,5 @@
-﻿using GildedRose.App.Interfaces;
-using GildedRose.Domain.Entities;
-using GildedRose.Extensions;
+﻿using GildedRose.Extensions;
 using System;
-using System.Collections.Generic;
 
 namespace GildedRose.App
 {
@@ -10,20 +7,16 @@ namespace GildedRose.App
     {
         public static void Main(string[] args)
         {
-            IGildedRose gildedRose;
-            IList<Item> items;
-
-            items = new List<Item>().SeedData();
-            gildedRose = new GildedRose(items);
+            var gildedRose = new GildedRose().SeedData();
 
             Console.WriteLine("OMGHAI!");
             for (var i = 0; i < 31; i++)
             {
                 Console.WriteLine("-------- day " + i + " --------");
                 Console.WriteLine("name, sellIn, quality");
-                for (var j = 0; j < items.Count; j++)
+                foreach (var item in gildedRose.GetItems())
                 {
-                    Console.WriteLine($"{items[j].Name}, {items[j].SellIn}, {items[j].Quality}");
+                    Console.WriteLine($"{item.Name}, {item.SellIn}, {item.Quality}");
                 }
                 Console.WriteLine("");
                 gildedRose.UpdateQuality();

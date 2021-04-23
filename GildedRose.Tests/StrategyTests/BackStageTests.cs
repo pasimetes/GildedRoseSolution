@@ -12,8 +12,8 @@ namespace GildedRose.Tests.StrategyTests
         public void Should_SetQualityToZero_When_DateIsPassed()
         {
             // Arrange
-            int sellIn = 0;
-            int quality = 50;
+            var sellIn = 0;
+            var quality = 50;
             var testItem = new Item { Name = "TestItem", ItemTypeId = (int)ItemTypeEnum.BackStage, Quality = quality, SellIn = sellIn };
             GildedRose.AddItem(testItem);
 
@@ -29,8 +29,8 @@ namespace GildedRose.Tests.StrategyTests
         public void Should_IncreaseQualityByTwo_When_LessThanTenDaysRemaining()
         {
             // Arrange
-            int sellIn = 9;
-            int quality = 48;
+            var sellIn = 9;
+            var quality = 48;
             var testItem = new Item { Name = "TestItem", ItemTypeId = (int)ItemTypeEnum.BackStage, Quality = quality, SellIn = sellIn };
             GildedRose.AddItem(testItem);
 
@@ -46,8 +46,8 @@ namespace GildedRose.Tests.StrategyTests
         public void Should_IncreaseQualityByThree_When_LessThanFiveDaysRemaining()
         {
             // Arrange
-            int sellIn = 4;
-            int quality = 47;
+            var sellIn = 4;
+            var quality = 47;
             var testItem = new Item { Name = "TestItem", ItemTypeId = (int)ItemTypeEnum.BackStage, Quality = quality, SellIn = sellIn };
             GildedRose.AddItem(testItem);
 
@@ -63,8 +63,8 @@ namespace GildedRose.Tests.StrategyTests
         public void ShouldNot_ExceedQualityLimit()
         {
             // Arrange
-            int sellIn = 4;
-            int quality = 49;
+            var sellIn = 4;
+            var quality = 49;
             var testItem = new Item { Name = "TestItem", ItemTypeId = (int)ItemTypeEnum.BackStage, Quality = quality, SellIn = sellIn };
             GildedRose.AddItem(testItem);
 

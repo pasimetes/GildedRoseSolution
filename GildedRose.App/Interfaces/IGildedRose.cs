@@ -1,4 +1,5 @@
 ﻿using GildedRose.Domain.Entities;
+using System.Collections.Generic;
 
 namespace GildedRose.App.Interfaces
 {
@@ -7,5 +8,7 @@ namespace GildedRose.App.Interfaces
         void AddItem(Item item);
 
         void UpdateQuality();
+
+        IEnumerable<Item> GetItems();
     }
 }

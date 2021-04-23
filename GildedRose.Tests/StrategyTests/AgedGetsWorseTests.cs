@@ -12,8 +12,8 @@ namespace GildedRose.Tests.StrategyTests
         public void ShouldNot_AllowQualityGoBelowZero()
         {
             // Arrange
-            int sellIn = 30;
-            int quality = 1;
+            var sellIn = 30;
+            var quality = 1;
             var testItem = new Item { Name = "TestItem", ItemTypeId = (int)ItemTypeEnum.AgedGetsWorse, Quality = quality, SellIn = sellIn };
             GildedRose.AddItem(testItem);
 

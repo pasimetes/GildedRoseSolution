@@ -1,6 +1,5 @@
 ﻿using GildedRose.App.Interfaces;
 using GildedRose.App.Mappings;
-using GildedRose.Domain.BusinessRules;
 using GildedRose.Domain.Entities;
 using System.Collections.Generic;
 
@@ -10,12 +9,6 @@ namespace GildedRose.App
     {
         private IList<Item> _items;
 
-        public GildedRose() { }
-        public GildedRose(IList<Item> items)
-        {
-            _items = items;
-        }
-
         public void AddItem(Item item)
         {
             if (_items == null)
@@ -24,11 +17,16 @@ namespace GildedRose.App
                 _items.Add(item);
         }
 
+        public IEnumerable<Item> GetItems()
+        {
+            return _items;
+        }
+
         public void UpdateQuality()
         {
             foreach (var item in _items)
             {
-                IStrategy strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(item.ItemTypeId);
+                var strategy = ItemTypeStrategyMap.GetUpdateStrategyByType(item.ItemTypeId);
                 strategy.Apply(item);
             }
         }

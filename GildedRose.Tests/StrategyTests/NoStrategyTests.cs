@@ -12,8 +12,8 @@ namespace GildedRose.Tests.StrategyTests
         public void ShouldNot_UpdateItem()
         {
             // Arrange
-            int sellIn = 20;
-            int quality = 5;
+            var sellIn = 20;
+            var quality = 5;
             var testItem = new Item { Name = "TestItem", ItemTypeId = (int)ItemTypeEnum.Legendary, Quality = quality, SellIn = sellIn };
             GildedRose.AddItem(testItem);
 

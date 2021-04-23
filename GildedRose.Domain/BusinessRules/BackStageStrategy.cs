@@ -4,8 +4,7 @@ namespace GildedRose.Domain.BusinessRules
 {
     public class BackStageStrategy : IStrategy
     {
-        public void Apply<TItem>(TItem item)
-            where TItem : Item
+        public void Apply(Item item)
         {
             item.SellIn--;
 

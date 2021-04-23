@@ -6,23 +6,23 @@ namespace GildedRose.App.Mappings
 {
     public static class ItemTypeStrategyMap
     {
-        private static readonly IDictionary<int, IStrategy> _registry;
+        private static readonly IDictionary<ItemTypeEnum, IStrategy> _registry;
         
         static ItemTypeStrategyMap()
         {
-            _registry = new Dictionary<int, IStrategy>
+            _registry = new Dictionary<ItemTypeEnum, IStrategy>
             {
-                { (int)ItemTypeEnum.AgedGetsBetter, new AgedGetsBetterStrategy() },
-                { (int)ItemTypeEnum.AgedGetsWorse, new AgedGetsWorseStrategy() },
-                { (int)ItemTypeEnum.BackStage, new BackStageStrategy() },
-                { (int)ItemTypeEnum.Legendary, new NoStrategy() },
-                { (int)ItemTypeEnum.Conjured, new ConjuredStrategy() }
+                { ItemTypeEnum.AgedGetsBetter, new AgedGetsBetterStrategy() },
+                { ItemTypeEnum.AgedGetsWorse, new AgedGetsWorseStrategy() },
+                { ItemTypeEnum.BackStage, new BackStageStrategy() },
+                { ItemTypeEnum.Legendary, new NoStrategy() },
+                { ItemTypeEnum.Conjured, new ConjuredStrategy() }
             };
         }
 
         public static IStrategy GetUpdateStrategyByType(int itemTypeId)
         {
-            return _registry[itemTypeId];
+            return _registry[(ItemTypeEnum)itemTypeId];
         }
     }
 }

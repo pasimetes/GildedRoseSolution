@@ -12,8 +12,8 @@ namespace GildedRose.Tests.StrategyTests
         public void Should_DegrateTwiceAsNormal()
         {
             // Arrange
-            int sellIn = 0;
-            int quality = 6;
+            var sellIn = 0;
+            var quality = 6;
             var testItem = new Item { Name = "TestItem", ItemTypeId = (int)ItemTypeEnum.Conjured, Quality = quality, SellIn = sellIn };
             GildedRose.AddItem(testItem);
 

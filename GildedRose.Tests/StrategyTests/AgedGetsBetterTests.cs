@@ -12,8 +12,8 @@ namespace GildedRose.Tests.StrategyTests
         public void ShouldNot_ExceedQualityLimit()
         {
             // Arrange
-            int sellIn = 20;
-            int quality = 49;
+            var sellIn = 20;
+            var quality = 49;
             var testItem = new Item { Name = "TestItem", ItemTypeId = (int)ItemTypeEnum.AgedGetsBetter, Quality = quality, SellIn = sellIn };
             GildedRose.AddItem(testItem);
 
